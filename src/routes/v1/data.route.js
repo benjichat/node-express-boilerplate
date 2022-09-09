@@ -48,7 +48,7 @@ module.exports = router;
  *             properties:
  *               name:
  *                 type: string
-  *               requests:
+ *               requests:
  *                 type: number
  *             example:
  *               name: acala

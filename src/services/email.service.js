@@ -54,7 +54,7 @@ To verify your email, click on this link: ${verificationEmailUrl}
 If you did not create an account, then ignore this email.`;
   // This section is to print out the email when testing in development
   if (config.env === 'development') {
-    logger.info(text)
+    logger.info(text);
   }
   await sendEmail(to, subject, text);
 };

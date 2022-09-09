@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
-const validator = require('validator');
-const bcrypt = require('bcryptjs');
+// const validator = require('validator');
+// const bcrypt = require('bcryptjs');
 const { toJSON, paginate } = require('./plugins');
-const { roles } = require('../config/roles');
 
 const dataSchema = mongoose.Schema(
   {
@@ -26,11 +25,10 @@ const dataSchema = mongoose.Schema(
 dataSchema.plugin(toJSON);
 dataSchema.plugin(paginate);
 
-
-dataSchema.pre('save', async function (next) {
-  const data = this;
-  next();
-});
+// dataSchema.pre('save', async function (next) {
+//   const data = this;
+//   next();
+// });
 
 /**
  * @typedef Data
