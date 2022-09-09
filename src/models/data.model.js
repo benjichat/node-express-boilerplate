@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 // const bcrypt = require('bcryptjs');
 const { toJSON, paginate } = require('./plugins');
 
+// New Schema for Data Model
+
 const dataSchema = mongoose.Schema(
   {
     name: {
