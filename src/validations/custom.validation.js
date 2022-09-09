@@ -15,7 +15,17 @@ const password = (value, helpers) => {
   return value;
 };
 
+const parachains = ["acala", "kurara", "polkadot"];
+
+const parachainId = (value, helpers) => {
+  if (!parachains.includes(value.toLowerCase())) {
+    return helpers.message('"{{#label}}" must be a valid parachain id');
+  }
+  return value;
+}
+
 module.exports = {
   objectId,
   password,
+  parachainId,
 };
